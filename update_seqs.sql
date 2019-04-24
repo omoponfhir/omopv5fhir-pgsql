@@ -1,0 +1,9 @@
+select setval('omop_v5.caresite_id_seq', ( select max(care_site_id) from omop_v5.care_site ));
+select setval('omop_v5.condition_occurrence_id_seq', ( select max(condition_occurrence_id) from omop_v5.condition_occurrence ));
+select setval('omop_v5.drug_exposure_id_seq', ( select max(drug_exposure_id) from omop_v5.drug_exposure ));
+select setval('omop_v5.measurement_occurrence_id_seq', ( select max(measurement_id) from omop_v5.measurement ));
+select setval('omop_v5.observation_occurrence_id_seq', ( select max(observation_id) from omop_v5.observation ));
+select setval('omop_v5.person_id_seq', ( select max(person_id) from omop_v5.person ));
+select setval('omop_v5.procedure_occurrence_id_seq', ( select max(procedure_occurrence_id) from omop_v5.procedure_occurrence ));
+select setval('omop_v5.provider_id_seq', ( select max(provider_id) from omop_v5.provider ));
+select setval('omop_v5.visit_occurrence_id_seq', ( select max(visit_occurrence_id) from omop_v5.visit_occurrence ));

@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  smart-gtfhir-postgresql:
+    build: .
+    restart: always
+    ports:
+      - "5438:5432"
+    volumes:
+      - smartVol:/var/lib/postgresql/data
+
+volumes:
+  smartVol:
