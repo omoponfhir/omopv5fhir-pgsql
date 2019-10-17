@@ -8,9 +8,16 @@ RUN cat /usr/local/share/sample_data/datadump* > /usr/local/share/sample_data/om
 FROM postgres:alpine
 
 # Define environment variable
-#ENV POSTGRES_USER omop_v5
-ENV POSTGRES_PASSWORD i3lworks
-#ENV POSTGRES_DB omop_v5
+ARG POSTGRES_USER
+ENV POSTGRES_USER $POSTGRES_USER
+ARG POSTGRES_PASSWORD
+ENV POSTGRES_PASSWORD $POSTGRES_PASSWORD
+ARG POSTGRES_DB
+ENV POSTGRES_DB $POSTGRES_DB
+
+# #ENV POSTGRES_USER omop_v5
+# ENV POSTGRES_PASSWORD i3lworks
+# #ENV POSTGRES_DB omop_v5
 
 # Copy omop_v5_dump.tgz to the /opt/data/ folder
 COPY --from=dumpbuilder /usr/local/share/sample_data/omop_v5_dump.tgz /opt/data/omop_v5_dump.tgz
