@@ -21,4 +21,4 @@ RUN chmod -R -v a+rwx /opt/data
 COPY loadDb.sh /docker-entrypoint-initdb.d/loadDb.sh
 RUN chmod -v a+rwx /docker-entrypoint-initdb.d/loadDb.sh
 
-EXPOSE 5432
+EXPOSE 5438
