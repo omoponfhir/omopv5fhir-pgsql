@@ -15,4 +15,4 @@ This will combind the splitted data into the gzipped tar ball file.
 
 Run this image
 
-`$ sudo docker run --name smart-postgres --net smart-net --ip 172.27.0.6 -p 5433:5432 --hostname smart-postgres -d smart-postgres:latest`
+`$ sudo docker run --name smart-postgres -p 5432:5432 -d smart-postgres:latest`
